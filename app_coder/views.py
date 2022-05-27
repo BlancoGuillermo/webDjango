@@ -1,19 +1,13 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import loader
-from app_coder.models import Curso
+from app_coder.models import *
+
 # Create your views here.
 
 def inicio(request):
 
-    plantilla = loader.get_template('index.html')
-    documento = plantilla.render(plantilla)
-
-
-
-    return HttpResponse(documento)
-
-
+    return render (request, 'index.html')
 
 
 def cursos(request):
@@ -28,8 +22,10 @@ def cursos(request):
 
 def profesores(request):
     
+    profesores = Profesor.objects.all() #llama a toda la data en la tabla sql
+    dicc = {'profesores' : profesores}
     plantilla = loader.get_template('profesores.html')
-    documento = plantilla.render(plantilla)
+    documento = plantilla.render(dicc)
 
 
 
@@ -37,8 +33,10 @@ def profesores(request):
 
 def estudiantes(request):
     
+    estudiantes = Estudiantes.objects.all() #llama a toda la data en la tabla sql
+    dicc = {'estudiantes' : estudiantes}
     plantilla = loader.get_template('estudiantes.html')
-    documento = plantilla.render(plantilla)
+    documento = plantilla.render(dicc)
 
 
 
@@ -46,19 +44,14 @@ def estudiantes(request):
 
 def entregables(request):
     
+    entregables = Entregable.objects.all() #llama a toda la data en la tabla sql
+    dicc = {'eentregables' : entregables}
     plantilla = loader.get_template('entregables.html')
-    documento = plantilla.render(plantilla)
+    documento = plantilla.render(dicc)
 
 
 
     return HttpResponse(documento)
-
-
-
-
-
-
-
 
 
 
