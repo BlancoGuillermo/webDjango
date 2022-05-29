@@ -63,3 +63,8 @@ def alta_curso(request, nombre):
 
     return HttpResponse(texto)
 
+
+def contacto(request):
+
+    return render(request, 'contacto.html')
+

@@ -1,12 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>cursos</h1>
-</body>
-</html>
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+
+
+
+    <table class="table"> <!-- eqtiqueta padre tabla-->
+        <thead> <!-- encabezados de la tabla -->
+          <tr> <!-- table row, primera fila-->
+            <th scope="col">id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Camada</th>
+          </tr>
+        </thead>
+        <tbody> <!-- contenido de la tabla-->
+
+            {% for n in cursos %}  <!-- Completamos una tabla con for-->
+
+          <tr> 
+            <th scope="row">{{n.id}}</th>
+            <td>{{n.nombre}}</td> <!-- table data (celda/columna)-->
+            <td>{{n.camada}}</td>
+          </tr>
+
+        
+            {% endfor %}
+
+
+        </tbody>
+      </table>
+   
+
+
+{% endblock %}
