@@ -11,6 +11,8 @@ urlpatterns = [
     path('estudiantes', views.estudiantes, name='Estudiantes'),
     path('entregables', views.entregables, name='Entregables'),
     path('contacto', views.contacto, name='Contacto'),
-    path('alta_curso' , views.curso_formulario, name='alta_curso')
+    path('alta_curso' , views.curso_formulario, name='alta_curso'),
+    path('buscar_curso' , views.buscar_curso, name='buscar_curso'),
+    path('buscar' , views.buscar)
 
 ]
