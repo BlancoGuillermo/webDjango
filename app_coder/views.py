@@ -54,7 +54,7 @@ def entregables(request):
     return HttpResponse(documento)
 
 
-
+'''
 def alta_curso(request, nombre):
 
     curso = Curso(nombre = nombre, camada = 287318)
@@ -62,9 +62,18 @@ def alta_curso(request, nombre):
     texto = f'Se ha guardado en la BD el curso: {curso.nombre}  Camada: {curso.camada}'
 
     return HttpResponse(texto)
-
+'''
 
 def contacto(request):
 
     return render(request, 'contacto.html')
 
+def curso_formulario(request):
+
+    if request.method == 'POST':
+
+        curso = Curso(nombre=request.POST['nombre'], camada=request.POST['camada'])
+        curso.save()
+        return render (request, 'formulario.html')
+
+    return render(request, 'formulario.html')
