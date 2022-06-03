@@ -1,0 +1,20 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+
+
+<h1>Indique que tipo de datos desea ingresar</h1>
+
+<ul>
+    <li><a  href="{% url 'alta_curso' %}"><button class="btn">Alta de Cursos</button></a></li>                
+    <li><a  href="{% url 'alta_profesores' %}"><button class="btn">Alta de Profesores</button></a></li>
+    <li><a  href="{% url 'alta_estudiantes' %}"><button class="btn">Alta de Estudiantes</button></a></li></li>
+
+</ul>
+
+
+
+{% endblock %}

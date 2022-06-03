@@ -123,6 +123,7 @@ button {
 
 }
 
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -132,6 +133,7 @@ body {
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-body-bg);
+  text-align: center;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -11426,3 +11428,4 @@ footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+

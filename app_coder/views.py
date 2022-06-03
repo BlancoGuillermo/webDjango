@@ -12,6 +12,10 @@ def inicio(request):
 
     return render (request, 'index.html')
 
+def carga_datos(request):
+    
+    return render (request, 'carga_datos.html')
+
 
 def cursos(request):
 
@@ -112,6 +116,7 @@ def buscar(request):
 
     else:
         HttpResponse('Datos ingresados no validos')
+
 
 '''
 def buscar_profe(request):
