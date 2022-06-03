@@ -1,0 +1,23 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<form action="alta_estudiantes" method="POST"> <!--method por default esta en GET-->
+    {% csrf_token %}
+    <p>Nombre:</p>
+    <input type="text" name="nombre" required>
+    <p>Apellido:</p>
+    <input type="text" name="apellido" required>
+    <p>Email:</p>
+    <input type="email" name="email" required>
+
+
+    <input type="submit" value="Enviar">
+
+
+</form>
+
+
+{% endblock %}

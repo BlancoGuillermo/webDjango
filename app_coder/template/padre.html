@@ -21,12 +21,11 @@
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
 
-                <a class="" href="{% url 'Inicio' %}">Inicio</a>                
-                <a class="" href="{% url 'Profesores' %}">Profesores</a>
-                <a class="" href="{% url 'Cursos' %}">Cursos</a>
-                <a class="" href="{% url 'Estudiantes' %}">Estudiantes</a>
-                <a class="" href="{% url 'Entregables' %}">Entregables</a>
-                <a class="" href="{% url 'Contacto' %}">Contacto</a>
+                <a  href="{% url 'Inicio' %}"><button class="btn">Inicio</button></a>                
+                <a  href="{% url 'Profesores' %}"><button class="btn">Profesores</button></a>
+                <a  href="{% url 'Cursos' %}"><button class="btn">Cursos</button></a>
+                <a  href="{% url 'Estudiantes' %}"><button class="btn">Estudiantes</button></a>
+
             </div>
         </nav>
         <!-- Masthead-->
@@ -36,7 +35,7 @@
                     <div class="col-xl-6">
                         <div class="text-center text-white">
                             <!-- Page heading-->
-                            <h1 class="mb-5">Generate more leads with a professional landing page!</h1>
+                            <h1 class="mb-5">NeoCoder</h1>
                             <!-- Signup form-->
                             <!-- * * * * * * * * * * * * * * *-->
                             <!-- * * SB Forms Contact Form * *-->
@@ -48,12 +47,8 @@
                             <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
                                 <!-- Email address input-->
                                 <div class="row">
-                                    <div class="col">
-                                        <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
-                                        <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">Email Address is required.</div>
-                                        <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
-                                    </div>
-                                    <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
+                                    
+                                    <div  id="cont"><a class="busq" href="{% url 'buscar_curso' %}"><button class="btn">¡Busca el curso para vos!</button></a></div>
                                 </div>
                                 <!-- Submit success message-->
                                 <!---->

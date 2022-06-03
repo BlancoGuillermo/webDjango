@@ -4,7 +4,27 @@
 
 {% block contenido %}
 
+<h1>Aquí te aprenderás de los mejores</h1>
+
+{% for n in profesores %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="card" >
+
+                <div class="card-body">
+                <h4 class="card-title">{{n.nombre}} {{n.apellido}}</h5>
+                <p class="card-email">{{n.email}}</p>
+
+                </div>
+            </div>
+        </div>
 
 
+
+</div>
+
+{% endfor %}
 
 {% endblock %}
